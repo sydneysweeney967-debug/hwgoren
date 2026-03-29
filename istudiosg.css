@@ -1,0 +1,308 @@
+  #rf-widget, #rf-widget * { box-sizing: border-box; }
+
+  #rf-widget {
+    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    color: rgba(18, 18, 18, 0.75);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #rf-widget .rf-section {
+    padding: 36px 0;
+    border-top: 0.1rem solid rgba(18, 18, 18, 0.12);
+  }
+
+  #rf-widget .rf-page-width {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  #rf-widget .rf-page-width--narrow {
+    max-width: 780px;
+  }
+
+  @media screen and (min-width: 750px) {
+    #rf-widget .rf-page-width { padding: 0 40px; }
+  }
+
+  #rf-widget .rf-heading-2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #121212;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 0 0 28px 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    #rf-widget .rf-heading-2 { font-size: 2.8rem; }
+  }
+
+  #rf-widget .rf-faq-header {
+    text-align: center;
+  }
+
+  #rf-widget .rf-stars {
+    display: inline-flex;
+    gap: 2px;
+    align-items: center;
+  }
+
+  #rf-widget .rf-star {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    color: #f5a623;
+  }
+
+  #rf-widget .rf-star::before { content: '★'; }
+  #rf-widget .rf-star--empty::before { color: rgba(18,18,18,0.18); }
+
+  #rf-widget .rf-stars--lg .rf-star { font-size: 22px; }
+
+  #rf-widget .rf-star--80 {
+    position: relative;
+    overflow: hidden;
+    width: 0.8em;
+  }
+  #rf-widget .rf-star--80::before { color: #f5a623; }
+  #rf-widget .rf-stars--lg .rf-star--80 { width: calc(0.8 * 22px); }
+
+  #rf-widget .rf-aggregate {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+    padding: 24px;
+    background: #f7f7f7;
+    border-radius: 12px;
+  }
+
+  #rf-widget .rf-aggregate__score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-width: 90px;
+  }
+
+  #rf-widget .rf-aggregate__number {
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: #121212;
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  #rf-widget .rf-aggregate__count {
+    font-size: 1.2rem;
+    color: rgba(18,18,18,0.45);
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  #rf-widget .rf-aggregate__bars {
+    flex: 1;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  #rf-widget .rf-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  #rf-widget .rf-bar-label {
+    font-size: 1.2rem;
+    color: rgba(18,18,18,0.5);
+    width: 28px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  #rf-widget .rf-bar-track {
+    flex: 1;
+    height: 5px;
+    background: rgba(18,18,18,0.1);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  #rf-widget .rf-bar-fill {
+    height: 100%;
+    background: #f5a623;
+    border-radius: 3px;
+  }
+
+  #rf-widget .rf-bar-pct {
+    font-size: 1.2rem;
+    color: rgba(18,18,18,0.45);
+    width: 32px;
+    flex-shrink: 0;
+  }
+
+  #rf-widget .rf-review-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 750px) {
+    #rf-widget .rf-review-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 48px;
+    }
+  }
+
+  #rf-widget .rf-review-item {
+    padding: 22px 0;
+    border-bottom: 0.1rem solid rgba(18,18,18,0.1);
+  }
+
+  #rf-widget .rf-review-item:first-child {
+    border-top: 0.1rem solid rgba(18,18,18,0.1);
+  }
+
+  @media screen and (min-width: 750px) {
+    #rf-widget .rf-review-item {
+      border-top: 0.1rem solid rgba(18,18,18,0.1);
+    }
+  }
+
+  #rf-widget .rf-review-item__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  #rf-widget .rf-review-item__date {
+    font-size: 1.2rem;
+    color: rgba(18,18,18,0.4);
+  }
+
+  #rf-widget .rf-review-item__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #121212;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+  }
+
+  #rf-widget .rf-review-item__body {
+    font-size: 1.5rem;
+    line-height: 1.65;
+    color: rgba(18,18,18,0.75);
+    margin: 0 0 14px 0;
+  }
+
+  #rf-widget .rf-review-item__author {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-style: normal;
+    font-size: 1.3rem;
+    color: rgba(18,18,18,0.5);
+  }
+
+  #rf-widget .rf-icon-person {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    color: rgba(18,18,18,0.35);
+  }
+
+  #rf-widget .rf-review-item__verified {
+    color: #0071E3;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 2px 6px;
+    background: rgba(0,113,227,0.08);
+    border-radius: 4px;
+    margin-left: 2px;
+  }
+
+  #rf-widget .rf-accordion {
+    border-bottom: 0.1rem solid rgba(18,18,18,0.12);
+  }
+
+  #rf-widget .rf-accordion:first-child {
+    border-top: 0.1rem solid rgba(18,18,18,0.12);
+  }
+
+  #rf-widget .rf-details {
+    width: 100%;
+  }
+
+  #rf-widget .rf-details[open] .rf-caret {
+    transform: rotate(180deg);
+  }
+
+  #rf-widget .rf-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 0;
+    cursor: pointer;
+    list-style: none;
+    -webkit-appearance: none;
+    user-select: none;
+    outline: none;
+  }
+
+  #rf-widget .rf-summary::-webkit-details-marker { display: none; }
+  #rf-widget .rf-summary::marker { display: none; }
+
+  #rf-widget .rf-summary:hover .rf-accordion__title {
+    color: #0071E3;
+  }
+
+  #rf-widget .rf-accordion__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #121212;
+    margin: 0;
+    letter-spacing: -0.01em;
+    transition: color 0.15s ease;
+    flex: 1;
+  }
+
+  #rf-widget .rf-caret {
+    width: 10px;
+    height: 6px;
+    flex-shrink: 0;
+    color: rgba(18,18,18,0.45);
+    transition: transform 0.25s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  #rf-widget .rf-accordion__body {
+    padding: 0 0 20px 0;
+  }
+
+  #rf-widget .rf-rte p {
+    font-size: 1.5rem;
+    line-height: 1.65;
+    color: rgba(18,18,18,0.75);
+    margin: 0;
+  }
+
+  #rf-widget .rf-rte p + p { margin-top: 10px; }
+
+  #rf-widget .rf-summary:focus-visible {
+    outline: 2px solid #0071E3;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #rf-widget .rf-caret { transition: none; }
+  }
+
